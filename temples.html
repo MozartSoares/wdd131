@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >    
+    <title>Temple Album</title>
+    <meta
+      name="description"
+      content="Explore our Temple Album to discover beautiful images and information about various temples around the world."
+    >
+    <meta name="author" content="Mozart Soares" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles/temples.css">
+    <link rel="stylesheet" href="./styles/temples-large.css">
+    <script src="./scripts/getdates.js" defer></script>
+    <script src="./scripts/temples.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Temple Album</h1>
+        <nav>
+          <div class="menu-toggle" id="menu-toggle">
+            <span class="hamburger"></span>
+          </div>
+          <ul class="menu" id="menu">
+            <li>
+              <a class="active-link" href="">Home</a>
+            </li>
+            <li><a href="">Old</a></li>
+            <li>
+              <a href="">New</a>
+            </li>
+            <li>
+              <a href="">Large</a>
+            </li>
+            <li>
+              <a href="">Small</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="album">
+        <h2>Home</h2>
+        <div class="temples-container">
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Salt Lake Temple">
+              <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Kirtland Temple">
+              <figcaption>Kirtland Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Nauvoo Temple">
+              <figcaption>Nauvoo Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Mesa Arizona Temple">
+              <figcaption>Mesa Arizona Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Laie Hawaii Temple">
+              <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Palmyra New York Temple">
+              <figcaption>Palmyra Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Provo City Center Temple">
+              <figcaption>Provo City Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Paris France Temple">
+              <figcaption>Paris France Temple</figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <img src="./images/temple.webp" alt="Rome Italy Temple">
+              <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p id="currentYear"></p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
