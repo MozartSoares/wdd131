@@ -86,7 +86,8 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-8154-thumb.jpg"
   }
 ];
-createTemples = (temples) => {
+
+const createTemples = (temples) => {
   const templeContainer = document.getElementById('temples-container');
   temples.forEach(temple => {
     const templeCard = document.createElement('div');
@@ -122,10 +123,11 @@ createTemples = (temples) => {
   });
 };
 
-window.addEventListener("load", createTemples(temples));
 
 const filterTemples = (condition) => {
   let filteredTemples = [];
+  const filtername = document.getElementById('filter-name');
+  filtername.textContent = condition.charAt(0).toUpperCase() + condition.slice(1);
   switch (condition) {
     case 'old':
       filteredTemples = temples.filter(temple => new Date(temple.dedicated) < new Date('1900-01-01'));
@@ -141,9 +143,12 @@ const filterTemples = (condition) => {
       break;
     default:
       filteredTemples = temples;
+      filtername.textContent = 'Home'
   }
+
   createTemples(filteredTemples);
 }
+
 
 const clearTemples = () => {
   const templeContainer = document.getElementById('temples-container');
@@ -187,3 +192,5 @@ document.getElementById('small').addEventListener('click', (e) => {
   e.preventDefault();
   updateView('small', 'small');
 });
+
+window.addEventListener("load", filterTemples(''));
