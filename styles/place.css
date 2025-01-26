@@ -1,0 +1,153 @@
+:root {
+  --font-primary: 'Arimo', serif;
+  --font-secondary: 'Cabin', serif;
+  --font-tertiary: 'Libre Franklin', serif;
+
+  --green: #009C3B;
+  --yellow:#ffdf00;
+  --blue:#002776;
+  --white: #f4f0eb;
+
+  --font-size-large: 2.5rem;
+  --font-size-medium: 1.4rem;
+  --font-size-small: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font-tertiary);
+  background-color: var(--white);
+  color: var(--blue);
+  line-height: 1.6;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+    border-bottom: 1px solid var(--yellow);
+}
+.title {
+  background-color: var(--blue);
+  border-radius: 8px;
+  padding: 0.5em;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+}
+
+header p {
+  font-size: var(--font-size-medium);
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  display: block;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  justify-content: center;
+}
+
+.weather-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  justify-content: center;
+}
+
+.info-card img {
+  width: 40px;
+}
+
+.weather-container img{
+  display: none;
+}
+.weather-container .card-title::after {
+  content: " 🌥️";
+}
+.info-card {
+  background-color: var(--white);
+  color: var(--blue);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: grid;
+  font-size: var(--font-size-medium);
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-container .card-title,
+.weather-container .card-title {
+  grid-column: span 2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-container .info-card {
+  grid-template-columns: 1fr;
+}
+
+
+footer {
+  border-top: 1px solid var(--yellow);
+  padding: 1.3em;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--green);
+}
+
+@media (max-width: 800px) {
+  :root {
+    --font-size-large: 2rem;
+    --font-size-medium: 1.1rem;
+    --font-size-small: 0.8rem;
+  }
+  .hero-section {
+    position: static;
+    transform: none;
+  }
+
+  .info-container,.weather-container {
+    position: static;
+    margin: 1rem 0;
+  }
+  
+  .weather-container img {
+    display: inline;
+  }
+
+  .weather-container .card-title::after {
+  content: "";
+  }
+
+}
