@@ -1,0 +1,75 @@
+:root {
+  --primary: #00b2a9;
+  --primary-dark: #005f73;
+  --primary-light: #94d2bd;
+  --secondary: #ca6702;
+  --secondary-light: #ee9b00;
+  --background: #f7f7f7;
+  --text: #333333;
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  margin: 20px;
+  color: black;
+  background-color: var(--background);
+}
+
+.site-plan {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  color: var(--secondary);
+}
+
+.color-swatch-container {
+  display: flex;
+  align-items: center;
+}
+
+.color-swatch {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+.color-swatch {
+  background: var(--secondary-light);
+}
+.color-swatch:nth-child(1) {
+  background: var(--primary);
+}
+.color-swatch:nth-child(2) {
+  background: var(--primary-dark);
+  color: #f7f7f7ff;
+}
+.color-swatch:nth-child(3) {
+  background: var(--primary-light);
+}
+.color-swatch:last-child {
+  background: var(--secondary);
+}
+
+.wireframe {
+  background: #eee;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.inter {
+  font-family: var(--font-heading);
+}
+.open {
+  font-family: var(--font-body);
+}
