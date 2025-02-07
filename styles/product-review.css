@@ -1,0 +1,129 @@
+header {
+  padding: 20px;
+}
+
+body main{
+  display: block;
+}
+
+main form {
+  margin: 0 auto;
+}
+
+.review-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--black);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: var(--white);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+select, input[type="date"], textarea, input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid  var(--blue);
+  border-radius: 4px;
+  font-family: 'Arimo', sans-serif;
+}
+
+.rating-container {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 0.25rem;
+}
+
+.star-rating input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.star-rating label {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ddd;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+  color: #ffc107;
+}
+
+.star-rating input[type="radio"]:focus + label {
+  outline: 2px solid #4d90fe;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: var(--yellow);
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  background-color: var(--blue);
+  color: var(--black);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--black);
+  color: var(--blue);
+}
+
+fieldset {
+  border: none;
+}
+
+input[type=radio],input[type=checkbox] {
+  font-size: 3rem;
+}
+
+select,input,label {
+  cursor: pointer;
+}

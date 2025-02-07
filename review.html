@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Product review submission confirmation page">
+    <meta name="author" content="Mozart Soares">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Review Submission Confirmation</h1>
+    </header>
+    
+    <main>
+        <div class="confirmation-container">
+            <h2>Thank you for your review!</h2>
+            <div class="review-summary">
+                <p><strong>Product:</strong> <span id="confirmed-product"></span></p>
+                <p><strong>Rating:</strong> <span id="confirmed-rating"></span></p>
+                <p><strong>Installation Date:</strong> <span id="confirmed-date"></span></p>
+                <p><strong>Useful Features:</strong> <span id="confirmed-features"></span></p>
+                <p><strong>Review:</strong> <span id="confirmed-review"></span></p>
+                <p><strong>Submitted by:</strong> <span id="confirmed-user"></span></p>
+            </div>
+            <div class="down-container">
+              <p class="review-count">Total reviews submitted from this browser: <span id="review-counter">0</span></p>
+              <a id="back" href="form.html">Submit another review</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p id="currentYear"></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
