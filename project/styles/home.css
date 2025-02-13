@@ -1,0 +1,235 @@
+:root {
+  --primary: #00b2a9;
+  --primary-dark: #005f73;
+  --primary-light: #94d2bd;
+  --secondary: #ca6702;
+  --secondary-light: #ee9b00;
+  --white: #f7f7f7;
+  --black: #333333;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --breakpoint-desktop: 1440px;
+
+  --font-size-large: 2rem;
+  --font-size-medium: 1.4rem;
+  --font-size-small: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  max-width: var(--breakpoint-desktop);
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-large);
+}
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-medium);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 1em;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+header span {
+  font-size: var(--font-size-large);
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+  padding: 1em;
+}
+
+header nav {
+  margin-top: 1em;
+  padding: 1em;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: var(--white);
+}
+header nav ul li a:hover {
+  color: var(--primary-dark);
+
+  transition: ease-in-out 0.2s;
+}
+
+main {
+  margin-top: 1em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 2fr 1fr;
+}
+
+section {
+  position: relative;
+  box-shadow: 0 0 30px gray;
+  border-radius: 10px;
+}
+
+section h2 {
+  font-weight: bold;
+  text-align: center;
+  color: var(--black);
+  padding: 0.5em;
+}
+
+section div {
+  background-color: var(--white);
+  padding: 2em;
+}
+
+.image-container,
+.image-container {
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0;
+  gap: 1em;
+  font-weight: bold;
+}
+
+.image-container img {
+  border-radius: 50%;
+}
+
+img.itajai {
+  border-radius: 10%;
+}
+
+.image-container p {
+  font-size: var(--font-size-medium);
+}
+.image-container {
+  background-color: var(--black);
+  color: var(--secondary);
+}
+
+.resources-container {
+  margin-top: 1em;
+  background-color: var(--black);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.resources-container p {
+  font-weight: bold;
+  font-size: var(--font-size-medium);
+  margin-bottom: 1em;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.resources-container ul {
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.resources-container ul,
+.resources-container ul li {
+  width: 100%;
+}
+
+.card {
+  background-color: var(--primary);
+}
+
+.button {
+  font-family: var(--font-body);
+  font-weight: bold;
+  padding: 0.5em 3em;
+  font-size: var(--font-size-small);
+  border-radius: 10px;
+  background-color: var(--secondary);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  display: block;
+}
+.button:hover {
+  background-color: var(--primary);
+  color: var(--black);
+  transition: ease-in-out 0.2s;
+}
+
+li:nth-child(7) {
+  margin-bottom: 0.5em;
+}
+
+.filter li:hover {
+  transform: scale(0.95);
+  background-color: var(--primary);
+  color: var(--black);
+  transition: ease-in-out 0.1s;
+}
+
+.filter li.active {
+  transform: none;
+  background-color: var(--primary);
+  color: var(--black);
+}
+
+.card-title {
+  position: absolute;
+  background-color: var(--primary);
+  display: flex;
+  max-height: 0.2em;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1em;
+  top: 0;
+  width: 100%;
+}
+
+.card-footer {
+  height: 0.1em;
+  padding: 1em;
+  background-color: var(--primary);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  margin-top: 1em;
+  padding: 1.3em;
+  text-align: center;
+  background-color: var(--primary);
+}
