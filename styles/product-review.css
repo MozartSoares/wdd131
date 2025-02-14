@@ -2,7 +2,7 @@ header {
   padding: 20px;
 }
 
-body main{
+body main {
   display: block;
 }
 
@@ -16,7 +16,7 @@ main form {
   padding: 2rem;
   background-color: var(--black);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: var(--white);
 }
 
@@ -31,12 +31,15 @@ label {
   color: var(--white);
 }
 
-select, input[type="date"], textarea, input[type="text"] {
+select,
+input[type="date"],
+textarea,
+input[type="text"] {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid  var(--blue);
+  border: 1px solid var(--blue);
   border-radius: 4px;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
 
 .rating-container {
@@ -63,7 +66,9 @@ select, input[type="date"], textarea, input[type="text"] {
   cursor: pointer;
   font-size: 2rem;
   color: #ddd;
-  transition: color 0.2s, transform 0.2s;
+  transition:
+    color 0.2s,
+    transform 0.2s;
 }
 
 .star-rating label:hover,
@@ -120,10 +125,13 @@ fieldset {
   border: none;
 }
 
-input[type=radio],input[type=checkbox] {
+input[type="radio"],
+input[type="checkbox"] {
   font-size: 3rem;
 }
 
-select,input,label {
+select,
+input,
+label {
   cursor: pointer;
 }

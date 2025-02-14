@@ -1,8 +1,8 @@
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  menuToggle.classList.toggle('active');
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  menuToggle.classList.toggle("active");
 });
 const temples = [
   {
@@ -88,28 +88,28 @@ const temples = [
 ];
 
 const createTemples = (temples) => {
-  const templeContainer = document.getElementById('temples-container');
-  temples.forEach(temple => {
-    const templeCard = document.createElement('div');
-    templeCard.classList.add('card');
+  const templeContainer = document.getElementById("temples-container");
+  temples.forEach((temple) => {
+    const templeCard = document.createElement("div");
+    templeCard.classList.add("card");
 
-    const templeFigure = document.createElement('figure');
+    const templeFigure = document.createElement("figure");
 
-    const templeImage = document.createElement('img');
+    const templeImage = document.createElement("img");
     templeImage.src = temple.imageUrl;
     templeImage.alt = temple.templeName;
-    templeImage.attributes.loading = 'lazy';
+    templeImage.attributes.loading = "lazy";
 
-    const templeName = document.createElement('figcaption');
+    const templeName = document.createElement("figcaption");
     templeName.textContent = temple.templeName;
 
-    const templeLocation = document.createElement('p');
+    const templeLocation = document.createElement("p");
     templeLocation.textContent = `Location: ${temple.location}`;
 
-    const templeDedicated = document.createElement('p');
+    const templeDedicated = document.createElement("p");
     templeDedicated.textContent = `Dedicated: ${temple.dedicated}`;
 
-    const templeArea = document.createElement('p');
+    const templeArea = document.createElement("p");
     templeArea.textContent = `Area: ${temple.area} sq ft`;
 
     templeCard.appendChild(templeFigure);
@@ -123,37 +123,40 @@ const createTemples = (temples) => {
   });
 };
 
-
 const filterTemples = (condition) => {
   let filteredTemples = [];
-  const filtername = document.getElementById('filter-name');
-  filtername.textContent = condition.charAt(0).toUpperCase() + condition.slice(1);
+  const filtername = document.getElementById("filter-name");
+  filtername.textContent =
+    condition.charAt(0).toUpperCase() + condition.slice(1);
   switch (condition) {
-    case 'old':
-      filteredTemples = temples.filter(temple => new Date(temple.dedicated) < new Date('1900-01-01'));
+    case "old":
+      filteredTemples = temples.filter(
+        (temple) => new Date(temple.dedicated) < new Date("1900-01-01")
+      );
       break;
-    case 'new':
-      filteredTemples = temples.filter(temple => new Date(temple.dedicated) > new Date('2000-01-01'));
+    case "new":
+      filteredTemples = temples.filter(
+        (temple) => new Date(temple.dedicated) > new Date("2000-01-01")
+      );
       break;
-    case 'large':
-      filteredTemples = temples.filter(temple => temple.area > 90000);
+    case "large":
+      filteredTemples = temples.filter((temple) => temple.area > 90000);
       break;
-    case 'small':
-      filteredTemples = temples.filter(temple => temple.area < 10000);
+    case "small":
+      filteredTemples = temples.filter((temple) => temple.area < 10000);
       break;
     default:
       filteredTemples = temples;
-      filtername.textContent = 'Home'
+      filtername.textContent = "Home";
   }
 
   createTemples(filteredTemples);
-}
-
+};
 
 const clearTemples = () => {
-  const templeContainer = document.getElementById('temples-container');
-  templeContainer.innerHTML = '';
-}
+  const templeContainer = document.getElementById("temples-container");
+  templeContainer.innerHTML = "";
+};
 
 const updateView = (filter, activeId) => {
   clearTemples();
@@ -162,35 +165,35 @@ const updateView = (filter, activeId) => {
 };
 
 const setActiveClass = (id) => {
-  document.querySelectorAll('nav ul li a').forEach(link => {
-    link.classList.remove('active-link');
+  document.querySelectorAll("nav ul li a").forEach((link) => {
+    link.classList.remove("active-link");
   });
-  document.getElementById(id).classList.add('active-link');
+  document.getElementById(id).classList.add("active-link");
 };
 
-document.getElementById('home').addEventListener('click', (e) => {
+document.getElementById("home").addEventListener("click", (e) => {
   e.preventDefault();
-  updateView('', 'home');
+  updateView("", "home");
 });
 
-document.getElementById('old').addEventListener('click', (e) => {
+document.getElementById("old").addEventListener("click", (e) => {
   e.preventDefault();
-  updateView('old', 'old');
+  updateView("old", "old");
 });
 
-document.getElementById('new').addEventListener('click', (e) => {
+document.getElementById("new").addEventListener("click", (e) => {
   e.preventDefault();
-  updateView('new', 'new');
+  updateView("new", "new");
 });
 
-document.getElementById('large').addEventListener('click', (e) => {
+document.getElementById("large").addEventListener("click", (e) => {
   e.preventDefault();
-  updateView('large', 'large');
+  updateView("large", "large");
 });
 
-document.getElementById('small').addEventListener('click', (e) => {
+document.getElementById("small").addEventListener("click", (e) => {
   e.preventDefault();
-  updateView('small', 'small');
+  updateView("small", "small");
 });
 
-window.addEventListener("load", filterTemples(''));
+window.addEventListener("load", filterTemples(""));

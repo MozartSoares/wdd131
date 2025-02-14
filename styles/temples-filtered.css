@@ -4,9 +4,9 @@
   --blue: #07beb8;
   --yellow: #ffee09;
 
-  --font-primary: 'Arimo', serif;
-  --font-secondary: 'Cabin', serif;
-  --font-tertiary: 'Libre Franklin', serif;
+  --font-primary: "Arimo", serif;
+  --font-secondary: "Cabin", serif;
+  --font-tertiary: "Libre Franklin", serif;
 
   --breakpoint-desktop: 1240px;
 
@@ -166,7 +166,7 @@ footer {
 }
 .hamburger::before,
 .hamburger::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 30px;
   height: 3px;
@@ -198,8 +198,6 @@ footer {
 }
 
 @media screen and (max-width: 870px) {
-
-
   .menu {
     display: none;
     flex-direction: column;

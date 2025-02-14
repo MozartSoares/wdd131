@@ -132,7 +132,7 @@ footer {
 }
 .hamburger::before,
 .hamburger::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 30px;
   height: 3px;

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santa Catarina Exploration | Contact Page</title>
+    <meta
+      name="description"
+      content="Santa Catarina Exploration. This is the contact page for the Santa Catarina Exploration, here you can contact us to suggest places."
+    />
+    <meta name="author" content="Mozart Soares" />
+    <link rel="preconnect" href="https:fonts.googleapis.com" />
+    <link rel="preconnect" href="https:fonts.gstatic.com" crossorigin />
+    <link
+      href="https:fonts.googleapis.comcss2?family=Arimo:wght@400..700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/explore.css" />
+    <script src="scripts/explore.js" defer></script>
+    <script src="scripts/base.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="./images/logo.webp"
+          alt="Santa Catarina Flag"
+          width="100"
+          height="75"
+          loading="lazy"
+        />
+        <h1>Santa Catarina Exploration</h1>
+      </div>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="hamburger"></span>
+        </div>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#" class="active-tab">Explore</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="explore">
+        <h2>Explore Santa Catarina</h2>
+
+        <!-- Best Beaches Section -->
+        <article class="explore-item">
+          <h3>Best Beaches in Santa Catarina</h3>
+          <div class="item-content">
+            <img
+              src="./images/florianopolis2.webp"
+              alt="Florianópolis Beaches"
+              loading="lazy"
+            />
+            <p class="article-heading">
+              Santa Catarina is home to some of the most stunning beaches in
+              Brazil. Here are the top beaches you must visit:
+            </p>
+            <ul>
+              <li>
+                <strong>Praia do Campeche (Florianópolis):</strong> Known for
+                its clear waters and surfing spots.
+              </li>
+              <li>
+                <strong>Praia da Joaquina (Florianópolis):</strong> Famous for
+                its sand dunes and vibrant nightlife.
+              </li>
+              <li>
+                <strong>Praia do Rosa (Imbituba):</strong> A paradise for nature
+                lovers and whale watchers.
+              </li>
+              <li>
+                <strong>Bombinhas:</strong> Perfect for diving and snorkeling
+                with its rich marine life.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Serra Catarinense Section -->
+        <article class="explore-item">
+          <h3>Exploring the Serra Catarinense</h3>
+          <div class="item-content">
+            <img
+              src="./images/serra2.webp"
+              alt="Serra Catarinense"
+              loading="lazy"
+            />
+            <p class="article-heading">
+              The Serra Catarinense mountain range offers breathtaking
+              landscapes and outdoor adventures. Here’s how to explore it:
+            </p>
+            <ul>
+              <li>
+                <strong>Serra do Rio do Rastro:</strong> Drive along one of
+                Brazil’s most scenic roads.
+              </li>
+              <li>
+                <strong>Urubici:</strong> Visit Morro da Igreja, the highest
+                point in southern Brazil.
+              </li>
+              <li>
+                <strong>Lages:</strong> Explore the region’s rich history and
+                traditional festivals.
+              </li>
+              <li>
+                <strong>Adventure Sports:</strong> Try hiking, rappelling, and
+                zip-lining in the canyons.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Cultural Heritage Section -->
+        <article class="explore-item">
+          <h3>Cultural Heritage</h3>
+          <div class="item-content">
+            <img
+              src="./images/pomerode.webp"
+              alt="Cultural Heritage"
+              loading="lazy"
+            />
+            <p class="article-heading">
+              Santa Catarina is a melting pot of European cultures. Don’t miss:
+            </p>
+            <ul>
+              <li>
+                <strong>Blumenau:</strong> Experience Oktoberfest and German
+                architecture.
+              </li>
+              <li>
+                <strong>Pomerode:</strong> Known as the most German city in
+                Brazil.
+              </li>
+              <li>
+                <strong>Treze Tílias:</strong> A charming town with Austrian
+                influences.
+              </li>
+              <li>
+                <strong>Festivals:</strong> Join traditional events like the
+                Festa do Pinhão (Pine Nut Festival).
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Interactive Map Section -->
+        <article class="explore-item">
+          <h3>Interactive Map</h3>
+          <div class="item-content">
+            <p class="map-heading">
+              You can explore Santa Catarina’s top destinations on the map
+              below:
+            </p>
+            <div id="map"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>
+          <span id="currentYear"></span><br />
+          Santa Catarina Exploration. All rights reserved.
+        </p>
+        <p>
+          Developed by
+          <a
+            href="https://github.com/mozartsoares"
+            target="_blank"
+            rel="noopener"
+            >Mozart Soares</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

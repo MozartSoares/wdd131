@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const products = [
     {
       id: "fc-1888",
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  const productSelect = document.getElementById('productName');
-  products.forEach(product => {
-    const option = document.createElement('option');
+  const productSelect = document.getElementById("productName");
+  products.forEach((product) => {
+    const option = document.createElement("option");
     option.value = product.name;
     option.textContent = product.name;
     productSelect.appendChild(option);

@@ -133,7 +133,7 @@ footer {
 }
 .hamburger::before,
 .hamburger::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 30px;
   height: 3px;
@@ -163,8 +163,7 @@ footer {
   transform: rotate(-45deg);
   bottom: 0;
 }
-@media screen and (max-width: 870px){
-
+@media screen and (max-width: 870px) {
   .menu {
     display: none;
     flex-direction: column;
