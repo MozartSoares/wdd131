@@ -135,7 +135,15 @@
   border-bottom: 1px solid var(--primary-dark);
   transition: ease-in-out 0.2s;
 }
+.op .btn:not(#contact-btn) {
+  background-color: transparent;
+}
 
+@media screen and (max-width: 500px) {
+  #contact-btn {
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 870px) {
   .text-container {
     position: relative;
@@ -159,6 +167,7 @@
     background-size: cover;
     object-fit: cover;
     height: 100%;
+    width: 98%;
   }
 
   #cards {
@@ -181,6 +190,9 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
   .op p {
+    color: var(--white);
+  }
+  .text-container .subtext {
     color: var(--white);
   }
 
